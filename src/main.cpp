@@ -1,7 +1,7 @@
-﻿#include "vendor/imgui.h"
-#include "vendor/imgui_impl_glfw.h"
-#include "vendor/imgui_impl_opengl3.h"
-#include <GL/glew.h>
+﻿#include "imgui.h"
+#include "backends/imgui_impl_glfw.h"  
+#include "backends/imgui_impl_opengl3.h" 
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <vector>
@@ -45,9 +45,8 @@ int main()
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    if (glewInit() != GLEW_OK)
-    {
-        std::cout << "GLEW failed to be initialized." << std::endl;
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+        std::cerr << "Failed to initialize GLAD\n";
         return -1;
     }
 
@@ -62,7 +61,7 @@ int main()
 
     unsigned int indices[] = { 0, 1, 2, 2, 3, 0 };
 
-    Shader fluidShader("vertexshader.glsl", "fragmentshader.glsl");
+    Shader fluidShader("../shaders/vertexshader.glsl", "../shaders/fragmentshader.glsl");
 
     unsigned int VBO, VAO, EBO;
     glGenVertexArrays(1, &VAO);
