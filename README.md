@@ -10,8 +10,7 @@ Windows:
 4. cd build
 5. cmake .. -G "Visual Studio 17 2022"
 6. cmake --build . --config Release
-7. cd bin/Release
-8. FluidSimulator.exe
+7. bin\Release\FluidSimulator.exe
 ```
 Linux (haven't personally tested):
 ```
