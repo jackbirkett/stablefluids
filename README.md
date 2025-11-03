@@ -19,7 +19,7 @@ Linux (haven't personally tested):
 2. cd FluidSimulation
 3. mkdir build
 4. cd build
-5. cmake ..
+5. cmake -DCMAKE_BUILD_TYPE=Release ..
 6. make
 7. ./bin/Release/FluidSimulator
 
