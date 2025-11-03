@@ -3,7 +3,7 @@ Hello, this is a fairly bare-bones real-time interactive fluid simulation progra
 ## How to build and run:
 
 Windows:
-
+```
 1. git clone https://github.com/jackbirkett/stablefluids.git
 2. cd FluidSimulation
 3. mkdir build
@@ -12,9 +12,9 @@ Windows:
 6. cmake --build . --config Release
 7. cd bin/Release
 8. FluidSimulator.exe
-
+```
 Linux (haven't personally tested):
-
+```
 1. git clone https://github.com/jackbirkett/stablefluids.git
 2. cd FluidSimulation
 3. mkdir build
@@ -22,7 +22,7 @@ Linux (haven't personally tested):
 5. cmake -DCMAKE_BUILD_TYPE=Release ..
 6. make
 7. ./bin/FluidSimulator
-
+```
 Libraries Used: GLFW, GLAD, Dear ImGui
 
 Resources Used:
