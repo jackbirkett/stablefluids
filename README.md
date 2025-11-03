@@ -1,4 +1,4 @@
-Hello, this is a fairly bare-bones real-time interactive fluid simulation program based on Jos Stam's Stable Fluids algorithm. It is written in C++ with OpenGL for rendering graphics. 
+Hello, this is a fairly bare-bones real-time interactive fluid simulation program based on Jos Stam's [Stable Fluids](https://pages.cs.wisc.edu/~chaol/data/cs777/stam-stable_fluids.pdf) algorithm. It is written in C++ with OpenGL for rendering graphics. 
 
 ## How to build and run:
 
