@@ -21,7 +21,7 @@ Linux (haven't personally tested):
 4. cd build
 5. cmake -DCMAKE_BUILD_TYPE=Release ..
 6. make
-7. ./bin/Release/FluidSimulator
+7. ./bin/FluidSimulator
 
 Libraries Used: GLFW, GLAD, Dear ImGui
 
