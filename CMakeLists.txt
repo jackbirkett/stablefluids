@@ -2,7 +2,6 @@
 cmake_policy(VERSION 3.22)
 project(FluidSimulator VERSION 1.0 LANGUAGES CXX)
 
-# Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
@@ -41,7 +40,6 @@ target_include_directories(imgui_lib PUBLIC
 
 target_link_libraries(imgui_lib PUBLIC glfw)
 
-# Source files
 add_executable(${PROJECT_NAME}
     src/main.cpp
     src/fluidsolver.cpp
@@ -68,6 +66,6 @@ else()
     target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic)
 endif()
 
-# Shaders (copy to runtime dir)
+# copy shader files
 file(GLOB SHADERS "shaders/*.*")
 file(COPY ${SHADERS} DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/shaders)
