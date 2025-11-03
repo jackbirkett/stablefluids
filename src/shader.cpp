@@ -29,7 +29,7 @@ Shader::Shader(const std::string& vertexPath, const std::string& fragmentPath)
     }
     catch (std::ifstream::failure& e)
     {
-        std::cout << "Error: shader file failed to be read: " << e.what() << std::endl;
+        std::cout << "ERROR -> shader file failed to be read: " << e.what() << std::endl;
     }
 
     const char *cVertexSource = vertexSource.c_str();
@@ -87,7 +87,7 @@ void Shader::checkCompileErrors(unsigned int shader, std::string type) const
         if (!success)
         {
             glGetShaderInfoLog(shader, 1024, NULL, infoLog);
-            std::cout << "Shader compilation error of type: " << type << "\n" << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
+            std::cout << "Shader compilation error of type: " << type << "\n" << infoLog << std::endl;
         }
     }
     else
@@ -96,7 +96,7 @@ void Shader::checkCompileErrors(unsigned int shader, std::string type) const
         if (!success)
         {
             glGetProgramInfoLog(shader, 1024, NULL, infoLog);
-            std::cout << "Program linking error of type: " << type << "\n" << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
+            std::cout << "Program linking error of type: " << type << "\n" << infoLog << std::endl;
         }
     }
 }
