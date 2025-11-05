@@ -5,7 +5,7 @@ Hello, this is a fairly bare-bones real-time interactive fluid simulation progra
 Windows:
 ```
 1. git clone https://github.com/jackbirkett/stablefluids.git
-2. cd FluidSimulation
+2. cd stablefluids
 3. mkdir build
 4. cd build
 5. cmake .. -G "Visual Studio 17 2022"
@@ -15,7 +15,7 @@ Windows:
 Linux (haven't personally tested):
 ```
 1. git clone https://github.com/jackbirkett/stablefluids.git
-2. cd FluidSimulation
+2. cd stablefluids
 3. mkdir build
 4. cd build
 5. cmake -DCMAKE_BUILD_TYPE=Release ..
